@@ -20,8 +20,8 @@ const Navigations = () => {
               }}
         >
             <Tab.Screen name="People" component={PeopleScreen} />
-            <Tab.Screen name="Planets" component={PlanetsScreen} />
             <Tab.Screen name="Films" component={FilmsScreen} />
+            <Tab.Screen name="Planets" component={PlanetsScreen} />
             <Tab.Screen name="Starship" component={StarshipsScreen} />
         </Tab.Navigator>
     </NavigationContainer>
