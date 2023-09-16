@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity, Image, Modal, Pressable, Alert } from 'react-native';
 import React, { useState } from 'react';
 import Styles from './styles';
-import cardImage from '../../Assets/Images/splashImage.png';
 import dots from '../../Assets/Images/dots.png';
 import eye from '../../Assets/Images/eye.png';
 import download from '../../Assets/Images/download.png';
@@ -11,8 +10,9 @@ import folder from '../../Assets/Images/folder.png';
 import lock from '../../Assets/Images/lock.png';
 import bin from '../../Assets/Images/delete.png';
 import alert from '../../Assets/Images/alert.png';
+import moment from 'moment';
 
-const FilmsCard = () => {
+const FilmsCard = ({item}: any) => {
 
   const [modalVisible, setModalVisible] = useState(false);
   const [deleteModalVisible, setDeleteModalVisible] = useState(false);
@@ -25,12 +25,14 @@ const FilmsCard = () => {
     setDeleteModalVisible(!deleteModalVisible)
   }
 
+  const createdTime = moment().format(item.item.created)
+
   return (
     <View style = {Styles.filmsCardMainContainer}>
       <View style = {Styles.threeDotsContainer}>
         <View style = {Styles.releaseDateContainer}>
           <Text style = {Styles.releaseDateText}>
-          $release_date
+          {item.item.release_date}
           </Text>
         </View>
         <TouchableOpacity onPress={() => setModalVisible(true)}>
@@ -41,22 +43,22 @@ const FilmsCard = () => {
       </View>
       <Image 
         style = {Styles.cardImage}
-        source={cardImage}
+        source={{uri: 'https://picsum.photos/200/300'}}
       />
       <View style = {Styles.detailsContainer}>
         <View style = {Styles.releasedStatusContainer}>
           <Text style = {Styles.releasedStatusText}>
-          $release_date
+          {createdTime}
           </Text>
         </View>
         <Text style = {Styles.filmTitle} numberOfLines={1}>
-        $title
+        {item.item.title}
         </Text>
         <Text style = {Styles.filmDescription} numberOfLines={2}>
-        $opening_crawl (2 lines)
+        {item.item.opening_crawl}
         </Text>
         <Text style = {Styles.filmDirector} numberOfLines={1}>
-        $director
+        {item.item.director}
         </Text>
       </View>
       <Modal
@@ -144,7 +146,7 @@ const FilmsCard = () => {
                 Caution!
                 </Text>
                 <Text style = {Styles.confirmationMessage}>
-                Are you sure you want to Delete $NAME
+                Are you sure you want to delete {item.item.title}
                 </Text>
                 <View style = {Styles.buttonsContainer}>
                   <TouchableOpacity style = {[Styles.submitButtons, {borderColor: '#DEDEDE', backgroundColor: '#ffffff'}]} onPress={() => toggleDeleteModal()}>

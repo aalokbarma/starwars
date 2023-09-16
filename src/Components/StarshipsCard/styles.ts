@@ -14,6 +14,7 @@ const Styles = StyleSheet.create({
         elevation: 1,
         borderRadius: 20,
         overflow: 'hidden',
+        marginVertical: 5,
     },
     cardImageContainer: {
         height: '45%',
@@ -84,6 +85,7 @@ const Styles = StyleSheet.create({
     },
     ratingsText: {
         width: '100%',
+        maxWidth: '100%',
         textAlign: 'right',
         fontFamily: 'Inter',
         fontWeight: '500',

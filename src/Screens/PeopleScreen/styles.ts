@@ -5,6 +5,13 @@ const Styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fbfbfb',
     },
+    allCharactersHeading: {
+        padding: 15,
+        fontSize: 22,
+        fontWeight: '800',
+        color: '#181818',
+        fontFamily: "Inter",
+    }
 });
 
 export default Styles;

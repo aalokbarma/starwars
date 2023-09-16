@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Styles from './styles';
 import logo from '../../Assets/Images/logo.png';

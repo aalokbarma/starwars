@@ -1,4 +1,4 @@
-import { View, Text, TextInput, Image } from 'react-native';
+import { View, TextInput, Image } from 'react-native';
 import React, { useState } from 'react';
 import Styles from './styles';
 import searchIcon from '../../Assets/Images/search.png';

@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const Styles = StyleSheet.create({
     filmsCardMainContainer: {
         width: '100%',
-        marginVertical: 5,
+        marginVertical: 15,
         height: 'auto',
     },
     threeDotsContainer: {
@@ -163,7 +163,7 @@ const Styles = StyleSheet.create({
       deleteModalContainer: {
         backgroundColor: '#ffffff',
         borderRadius: 4,
-        width: '75%',
+        width: '80%',
         display: 'flex',
         padding: 20,
       },

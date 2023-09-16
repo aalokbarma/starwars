@@ -5,13 +5,8 @@ import {
   StyleSheet,
   useColorScheme,
 } from 'react-native';
-
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 import Header from './src/Components/Header';
 import Searchbar from './src/Components/Searchbar';
-import LaunchScreen from './src/Screens/LaunchScreen';
 import Navigations from './src/Navigation';
 
 function App(): JSX.Element {
