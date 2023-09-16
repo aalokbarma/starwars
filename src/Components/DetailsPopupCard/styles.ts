@@ -14,6 +14,7 @@ const Styles = StyleSheet.create({
     },
     cardImage: {
         width: '100%',
+        height: 175,
     },
     detailsContainer: {
         width: '100%',
